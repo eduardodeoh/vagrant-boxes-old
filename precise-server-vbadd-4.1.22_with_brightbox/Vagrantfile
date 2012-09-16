@@ -5,7 +5,7 @@ Vagrant::Config.run do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = ""
+  config.vm.box_url = "https://dl.dropbox.com/s/tx7ubvq8bjdh1fq/serverprecise32-brightbox.box?dl=1"
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
@@ -17,6 +17,7 @@ Vagrant::Config.run do |config|
 
   config.vm.host_name = 'server'
   config.vm.customize ["modifyvm", :id, "--memory", "1024"]
+  config.vm.customize ["modifyvm", :id, "--pae", "on"]
   config.vm.share_folder "v-root", "/home/vagrant", "."
   #config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   
