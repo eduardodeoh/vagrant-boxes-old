@@ -1,23 +1,35 @@
 #!/bin/bash
 
+filecheck="/root/setup.sh.ok"
+
 set -e # Exit script immediately on first error.
-set -x # Print commands and their arguments as they are executed.
+#set -x # Print commands and their arguments as they are executed.
 
 export DEBIAN_FRONTEND=noninteractive
 
-#Install package for apt-add-repository
-sudo apt-get -y install python-software-properties
+if [ ! -f $filecheck ]
+then
+	
+	echo -e "\n"
+	echo "Executing setup...."
 
-#Add Brightbox repository for Ruby
-sudo apt-add-repository ppa:brightbox/ruby-ng 
+	#Install package for apt-add-repository
+	apt-get -y install python-software-properties
 
-#Update package list
-sudo apt-get update
+	#Add Brightbox repository for Ruby
+	apt-add-repository ppa:brightbox/ruby-ng 
 
-#Install Ruby 1.9.3-p194
-sudo apt-get -y install ruby-switch ruby1.9.1 rubygems
+	#Update package list
+	apt-get update
 
-#Install packages
-sudo apt-get -y install git-core
-sudo apt-get -y install curl
-sudo apt-get -y install vim
+	#Install Ruby 1.9.3-p194
+	apt-get -y install ruby-switch ruby1.9.1 rubygems
+
+	touch $filecheck
+
+else
+	
+	echo -e "\n"
+	echo "Script setup.sh is OK!"
+	
+fi
