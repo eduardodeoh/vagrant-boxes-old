@@ -11,7 +11,7 @@ Vagrant::Config.run do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://dl.dropbox.com/s/108uhsfwdiy5obc/serverprecise32minimal.box?dl=1"
+  config.vm.box_url = ""
 
   #Customizations
   config.vm.host_name = 'server'

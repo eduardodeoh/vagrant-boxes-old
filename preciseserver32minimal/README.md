@@ -1,19 +1,26 @@
 Description
 ===========
 
-	Install/Configure a Vagrant basebox Ubuntu Server 12.04.1 LTS 32bits + Virtual Box Guest Additions 4.1.22
+	Install/Configure a Vagrant basebox Ubuntu Server 12.04.1 LTS 32bits + Virtual Box Guest Additions 4.1.22 + Provisioning
 
-	* Size of basebox - 288MB
+	* Size of basebox - 258MB
+
 	
 Provisioning
 ============
 
-	* setup.sh
-		* Ruby 1.9.3 + Rubygems by Brightbox - http://wiki.brightbox.co.uk/docs:ruby-ng
-	* provisioners.sh
-		* Chef or Puppet - Edit this file for your choose
-	* packages.sh
-		* Not active
+	Provisioning is performed in two steps:
+
+	1 - Shell Provisioner
+
+		* setup.sh
+			* Ruby 1.9.3 + Rubygems by Brightbox - http://wiki.brightbox.co.uk/docs:ruby-ng
+		* provisioners.sh
+			* Chef or Puppet - Edit this file for your choose
+		* packages.sh
+			* Not active
+
+	2 - Chef Solo Provisioner
 
 Requirements
 ============
@@ -32,6 +39,12 @@ Usage
 	* librarian-chef install
 	* vagrant up
 
+	Tips - for windows users, install Railsinstaller (http://railsinstaller.org) before performing the above steps
+
+Version
+-------
+
+	* Version 1.0
 
 License and Author
 ==================
