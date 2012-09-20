@@ -4,6 +4,13 @@
 site 'http://community.opscode.com/api/v1'
 
 cookbook 'git'
+cookbook 'vim'
+cookbook 'sqlite'
+
+cookbook 'curl'
+	:git => 'https://github.com/retr0h/cookbook-curl'
+
+
 
 # cookbook 'chef-client'
 

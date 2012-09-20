@@ -39,12 +39,12 @@ Usage
 	* librarian-chef install
 	* vagrant up
 
-	Tips - for windows users, install Railsinstaller (http://railsinstaller.org) before performing the above steps
+	Tips - for windows users, install railsinstaller.org before performing the above steps
 
 Version
--------
+=======
 
-	* Version 1.0
+	* 1.0
 
 License and Author
 ==================
