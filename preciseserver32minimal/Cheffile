@@ -7,7 +7,7 @@ cookbook 'git'
 cookbook 'vim'
 cookbook 'sqlite'
 
-cookbook 'curl'
+cookbook 'curl',
 	:git => 'https://github.com/retr0h/cookbook-curl'
 
 
