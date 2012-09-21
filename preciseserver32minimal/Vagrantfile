@@ -17,7 +17,8 @@ Vagrant::Config.run do |config|
   config.vm.host_name = 'server'
   config.vm.customize ["modifyvm", :id, "--memory", "1024"]
   config.vm.customize ["modifyvm", :id, "--pae", "on"]
-  config.vm.share_folder "v-root", "/home/vagrant", "."
+  #Default shared folder is "/vagrant"
+  #config.vm.share_folder "v-root", "/home/vagrant/projects", "."
 
   #Enable Shell Provisioner
   config.vm.provision :shell, :path => "scripts/setup.sh"
