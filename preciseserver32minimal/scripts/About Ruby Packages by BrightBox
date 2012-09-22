@@ -1,0 +1,5 @@
+Additional Information about Ruby Packages by BrightBox
+
+sudo apt-get install ruby1.9.1-full
+sudo apt-get install ri1.9.1
+sudo apt-get install ruby1.9.1-examples
