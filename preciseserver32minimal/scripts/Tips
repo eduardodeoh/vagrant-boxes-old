@@ -1,0 +1,17 @@
+Tips 
+
+#Bash Prompt
+https://github.com/fnando/bash
+
+#Pryrc e IRBrc
+https://github.com/fnando/dotfiles
+
+#Install Telnet
+  sudo apt-get install telnet
+
+#Repo Ruby Packages - HelloBits
+  http://apt.hellobits.com/
+  https://github.com/fabiokung/apt-heroku
+
+#TMUX
+  sudo apt-get install tmux

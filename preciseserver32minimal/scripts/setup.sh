@@ -13,6 +13,9 @@ then
 	echo -e "\n"
 	echo "Executing setup...."
 
+	#Update package list
+	apt-get update
+
 	#Install package for apt-add-repository
 	apt-get -y install python-software-properties
 
@@ -24,6 +27,10 @@ then
 
 	#Install Ruby 1.9.3-p194
 	apt-get -y install ruby-switch ruby1.9.1 rubygems
+
+	#Install bash-completion
+	apt-get install bash-completion
+	
 
 	touch $filecheck
 
